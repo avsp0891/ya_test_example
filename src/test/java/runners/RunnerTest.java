@@ -5,7 +5,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import java.util.HashMap;
 
 
 @RunWith(Cucumber.class)
@@ -17,21 +16,13 @@ import java.util.HashMap;
         },
         features = {"src/test/java/feature/"},
         glue = {"steps"},
-        tags = "@auth and not @skip",
+        tags = "@test_1 and not @skip",
         stepNotifications = true
 )
 
-public class Runner {
-    public static final String url = "http://stage.dkre.ocrv.com.rzd/";
+public class RunnerTest {
+    public static final String URL = "https://ya.ru/";
     public static final int TIMEOUT = 4;
-    public static final String testDataPath = "res/docs/";
-
-    public static final HashMap<String, String> credentials = new HashMap<String, String>() {
-        {
-            put("ppp1", "ppp1");
-        }
-    };
-
 
     @BeforeClass
     static public void setup() {
