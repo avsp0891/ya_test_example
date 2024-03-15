@@ -16,12 +16,13 @@ import org.junit.runner.RunWith;
         },
         features = {"src/test/java/feature/"},
         glue = {"steps"},
-        tags = "@test_1 and not @skip",
+        tags = "@test_2 and not @skip",
         stepNotifications = true
 )
 
 public class RunnerTest {
-    public static final String URL = "https://ya.ru/";
+//    public static final String URL = "https://ya.ru/";
+    public static final String URL = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/";
     public static final int TIMEOUT = 4;
 
     @BeforeClass
@@ -30,8 +31,5 @@ public class RunnerTest {
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "Chrome";
     }
-
-
-
 }
 
